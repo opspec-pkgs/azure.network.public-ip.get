@@ -1,0 +1,53 @@
+name: github.com/opspec-pkgs/azure.network.public-ip.get
+description: gets public ip from azure network resource
+inputs:
+  subscriptionId:
+    string:
+      constraints: { minLength: 1 }
+      description: id of azure subscription
+  loginId:
+    string:
+      constraints: { minLength: 1 }
+      description: id of user, service principal, or app to login with
+  loginSecret:
+    string:
+      constraints: { minLength: 1 }
+      description: secret of user, service principal, or app to login with
+      isSecret: true
+  name:
+    string:
+      constraints: { minLength: 1 }
+      description: name of the public ip
+  resourceGroup:
+    string:
+      constraints: { minLength: 1 }
+      description: name of the resource group
+  loginTenantId:
+    string:
+      constraints: { minLength: 1 }
+      description: tenant id of user, service principal, or app to login with
+      default: ' '
+  loginType:
+    string:
+      constraints: { enum: [user, sp]}
+      description: type of login; 'user' (default) or 'sp' for service principal
+      default: user
+outputs:
+  value:
+    string:
+      description: the public ip
+run:
+  container:
+    image: { ref: 'azuresdk/azure-cli-python:0.2.10' }
+    cmd: [ /cmd.sh ]
+    files: { /cmd.sh }
+    stdOut:
+      value=: value
+    envVars:
+      subscriptionId:
+      loginId:
+      loginSecret:
+      name:
+      resourceGroup:
+      loginTenantId:
+      loginType:
