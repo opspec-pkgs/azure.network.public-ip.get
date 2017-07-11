@@ -30,6 +30,6 @@ value=$(az network public-ip show \
     --name "$name" \
     --resource-group "$resourceGroup" \
     --query 'ipAddress' \
-    --output json)
+    --output tsv)
 
 echo "value=$value"
