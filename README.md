@@ -22,7 +22,7 @@ opctl run github.com/opspec-pkgs/azure.network.public-ip.get.get#VERSION
 ```yaml
 run:
   op:
-    pkg: { ref: github.com/opspec-pkgs/azure.network.public-ip.get.get#VERSION }
+    pkg: { ref: github.com/opspec-pkgs/azure.network.public-ip.get#VERSION }
     inputs:
       subscriptionId:
       loginId:
