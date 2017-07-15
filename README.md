@@ -1,7 +1,7 @@
-# problem statement
+# Problem statement
 gets a public ip from azure network resource
 
-# example usage
+# Example usage
 
 > note: in examples, VERSION represents a version of the azure.network.public-ip.get pkg
 
@@ -36,3 +36,8 @@ run:
     outputs:
       value:
 ```
+
+# Support
+
+join us on [![Slack](https://opspec-slackin.herokuapp.com/badge.svg)](https://opspec-slackin.herokuapp.com/)
+or [open an issue](https://github.com/opspec-pkgs/azure.network.public-ip.get/issues)
