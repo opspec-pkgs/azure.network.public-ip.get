@@ -20,21 +20,20 @@ opctl run github.com/opspec-pkgs/azure.network.public-ip.get.get#VERSION
 ## compose
 
 ```yaml
-run:
-  op:
-    pkg: { ref: github.com/opspec-pkgs/azure.network.public-ip.get#VERSION }
-    inputs:
-      subscriptionId:
-      loginId:
-      loginSecret:
-      name:
-      resourceGroup:
-      # end optional args
-      loginTenantId:
-      loginType:
-      # end optional args
-    outputs:
-      value:
+op:
+  pkg: { ref: github.com/opspec-pkgs/azure.network.public-ip.get#VERSION }
+  inputs:
+    subscriptionId:
+    loginId:
+    loginSecret:
+    name:
+    resourceGroup:
+    # end optional args
+    loginTenantId:
+    loginType:
+    # end optional args
+  outputs:
+    value:
 ```
 
 # Support
