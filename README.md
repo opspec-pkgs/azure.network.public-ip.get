@@ -1,5 +1,5 @@
 # Problem statement
-gets a public ip from azure network resource
+gets the public ip of an azure network resource
 
 # Example usage
 
