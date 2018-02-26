@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/opspec-pkgs/azure.network.public-ip.get.svg?branch=master)](https://travis-ci.org/opspec-pkgs/azure.network.public-ip.get)
 
+<img src="icon.svg" alt="icon" height="100px">
 
 # Problem statement
 
