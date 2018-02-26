@@ -5,5 +5,14 @@ All notable changes will be documented in this file in accordance with
 
 ## \[Unreleased]
 
+## \[2.0.0] - 2018-02-25
+
+### Changed
+
+- rename value to publicIp
+- rename name to ipName
+- return object
+- publicIp no longer written to stdOut
+
 ## \[1.0.0] - 2017-07-10
 

@@ -26,10 +26,7 @@ az account set --subscription "$subscriptionId"
 ### end login
 
 echo 'getting public ip'
-value=$(az network public-ip show \
-    --name "$name" \
+az network public-ip show \
+    --name "$publicIpName" \
     --resource-group "$resourceGroup" \
-    --query 'ipAddress' \
-    --output tsv)
-
-echo "value=$value"
+    > /publicIp

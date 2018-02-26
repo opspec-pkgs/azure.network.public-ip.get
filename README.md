@@ -1,43 +1,44 @@
 [![Build Status](https://travis-ci.org/opspec-pkgs/azure.network.public-ip.get.svg?branch=master)](https://travis-ci.org/opspec-pkgs/azure.network.public-ip.get)
 
+
 # Problem statement
 
 gets the public ip of an azure network resource
 
+# Format
+
+this version of the pkg is in [![opspec 0.1.5](https://img.shields.io/badge/opspec-0.1.5-brightgreen.svg?colorA=6b6b6b&colorB=fc16be)](https://opspec.io/0.1.5/packages.html) format
+
 # Example usage
 
-> note: in examples, VERSION represents a version of the
-> azure.network.public-ip.get pkg
-
-## install
+## Install
 
 ```shell
-opctl pkg install github.com/opspec-pkgs/azure.network.public-ip.get.get#VERSION
+opctl pkg install github.com/opspec-pkgs/azure.network.public-ip.get#2.0.0
 ```
 
-## run
+## Run
 
 ```
-opctl run github.com/opspec-pkgs/azure.network.public-ip.get.get#VERSION
+opctl run github.com/opspec-pkgs/azure.network.public-ip.get#2.0.0
 ```
 
-## compose
+## Compose
 
 ```yaml
 op:
-  pkg: { ref: github.com/opspec-pkgs/azure.network.public-ip.get#VERSION }
-  inputs:
-    subscriptionId:
+pkg: { ref: github.com/opspec-pkgs/azure.network.public-ip.get#2.0.0 }
+inputs:
     loginId:
     loginSecret:
-    name:
+    publicIpName:
     resourceGroup:
-    # end optional args
+    subscriptionId:
+    # params w/ default
     loginTenantId:
     loginType:
-    # end optional args
-  outputs:
-    value:
+outputs:
+    publicIp:
 ```
 
 # Support
