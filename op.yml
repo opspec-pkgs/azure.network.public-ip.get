@@ -1,5 +1,6 @@
 name: github.com/opspec-pkgs/azure.network.public-ip.get
 description: gets the public ip of an azure network resource
+icon: /icon.svg
 inputs:
   subscriptionId:
     string:
