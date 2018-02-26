@@ -14,7 +14,7 @@ inputs:
       constraints: { minLength: 1 }
       description: secret of user, service principal, or app to login with
       isSecret: true
-  name:
+  publicIpName:
     string:
       constraints: { minLength: 1 }
       description: name of the public ip
@@ -33,22 +33,22 @@ inputs:
       description: type of login; 'user' (default) or 'sp' for service principal
       default: user
 outputs:
-  value:
-    string:
+  publicIp:
+    object:
       description: the public ip
-version: 1.0.0
+version: 2.0.0
 run:
   container:
-    image: { ref: 'azuresdk/azure-cli-python:0.2.10' }
+    image: { ref: 'azuresdk/azure-cli-python:2.0.25' }
     cmd: [ /cmd.sh ]
-    files: { /cmd.sh }
-    stdOut:
-      value=: value
+    files:
+      /cmd.sh:
+      /publicIp: $(publicIp)
     envVars:
       subscriptionId:
       loginId:
       loginSecret:
-      name:
+      publicIpName:
       resourceGroup:
       loginTenantId:
       loginType:
