@@ -28,17 +28,17 @@ opctl run github.com/opspec-pkgs/azure.network.public-ip.get#2.0.0
 
 ```yaml
 op:
-pkg: { ref: github.com/opspec-pkgs/azure.network.public-ip.get#2.0.0 }
-inputs:
+  pkg: { ref: github.com/opspec-pkgs/azure.network.public-ip.get#2.0.0 }
+  inputs:
+    subscriptionId:
     loginId:
     loginSecret:
     publicIpName:
     resourceGroup:
-    subscriptionId:
     # params w/ default
     loginTenantId:
     loginType:
-outputs:
+  outputs:
     publicIp:
 ```
 
