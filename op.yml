@@ -36,7 +36,7 @@ outputs:
   publicIp:
     object:
       description: the public ip
-version: 2.0.0
+version: 2.1.0
 run:
   container:
     image: { ref: 'azuresdk/azure-cli-python:2.0.25' }
